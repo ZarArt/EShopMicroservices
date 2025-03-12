@@ -13,7 +13,7 @@ internal class GetProductsByCategoryQueryHandler(IDocumentSession session)
     public async Task<GetProductsByCategoryResult> Handle(GetProductsByCategoryQuery query, CancellationToken cancellationToken)
     {
         var products = await session.Query<Product>()
-            .Where(p => p.Categories.Contains(query.Category))
+            .Where(p => p.Category.Contains(query.Category))
             .ToListAsync(cancellationToken);
 
         return new GetProductsByCategoryResult(products);
