@@ -13,7 +13,7 @@ public static class DependencyInjection
         var connectionString = configuration.GetConnectionString("Database");
 
         serviceCollection.AddScoped<ISaveChangesInterceptor, AuditableEntityInterceptor>();
-        serviceCollection.AddScoped<ISaveChangesInterceptor, DispatchDomainEventsInterceptors>();
+        serviceCollection.AddScoped<ISaveChangesInterceptor, DispatchDomainEventsInterceptor>();
 
         serviceCollection.AddDbContext<ApplicationDbContext>((sp, options) =>
         {
