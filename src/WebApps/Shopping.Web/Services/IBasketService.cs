@@ -18,8 +18,8 @@ public interface IBasketService
 
     public async Task<ShoppingCartModel> LoadUserBasket()
     {
-        // Get Basket If Not Exist Create New Basket with Default Logged In User Name: testUser
-        var userName = "testUser";
+        // Get Basket If Not Exist Create New Basket with Default Logged In User Name: user
+        var userName = "user";
         ShoppingCartModel basket;
 
         try
