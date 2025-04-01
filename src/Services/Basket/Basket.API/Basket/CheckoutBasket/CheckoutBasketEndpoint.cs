@@ -1,5 +1,4 @@
 ﻿using Basket.API.Basket.StoreBasket;
-using Basket.API.Dtos;
 
 namespace Basket.API.Basket.CheckoutBasket;
 
